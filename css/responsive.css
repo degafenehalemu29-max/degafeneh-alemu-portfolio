@@ -1,0 +1,262 @@
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .nav-menu {
+        gap: 18px;
+    }
+
+    .nav-link {
+        font-size: 10px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-skills {
+        justify-content: center;
+    }
+
+    .hero-image-container {
+        margin-top: 30px;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .about-image-container {
+        position: relative;
+        top: auto;
+        max-width: 500px;
+        margin: auto;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 750px) {
+
+    /* Container */
+
+    .container {
+        width: calc(100% - 40px);
+    }
+
+
+    /* Navbar */
+
+    .nav-container {
+        position: relative;
+        padding: 16px 20px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        background: transparent;
+        color: var(--text-primary);
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
+        z-index: 1001;
+        flex-shrink: 0;
+    }
+
+
+    /* Navigation Menu */
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        width: auto;
+        padding: 15px;
+
+        background: var(--bg-card);
+
+        border: 1px solid var(--border-color);
+        border-top: none;
+        border-radius: 0 0 15px 15px;
+
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu .nav-link {
+        display: block;
+        width: 100%;
+        padding: 14px 10px;
+        font-size: 12px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding-top: 140px;
+    }
+
+    .hero-container {
+        width: calc(100% - 40px);
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+
+    /* Hero Image */
+
+    .hero-image-frame {
+        width: 290px;
+        height: 350px;
+    }
+
+    .hero-image-glow {
+        width: 280px;
+        height: 280px;
+    }
+
+    .badge-top {
+        right: -10px;
+    }
+
+    .badge-bottom {
+        left: -10px;
+    }
+
+
+    /* Hero Buttons */
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+
+    /* Education */
+
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* About */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .about-image-container {
+        position: relative;
+        top: auto;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .about-image-frame {
+        max-width: 360px;
+    }
+
+    .about-content h2 {
+        font-size: 38px;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero-image-frame {
+        width: 250px;
+        height: 310px;
+    }
+
+    .floating-badge {
+        padding: 9px 11px;
+    }
+
+    .floating-badge strong {
+        font-size: 10px;
+    }
+
+    .floating-badge small {
+        font-size: 8px;
+    }
+
+    .intro-card,
+    .education-card {
+        padding: 25px;
+    }
+}

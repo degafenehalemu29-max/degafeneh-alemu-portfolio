@@ -1,0 +1,178 @@
+/* ========================================
+   HERO ANIMATIONS
+======================================== */
+
+/* Hero text enters from the left */
+.hero-content {
+    animation:
+        fadeInLeft 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+
+/* Profile image enters smoothly from the right */
+.hero-image-container {
+    animation:
+        fadeInRight 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+
+/* After entering, the profile image gently floats up and down */
+.hero-image-frame {
+    animation:
+        floatingImage 5s ease-in-out 0.9s infinite;
+}
+
+
+/* Floating badge animation */
+.floating-badge {
+    animation:
+        floatingBadge 4s ease-in-out infinite;
+}
+
+
+/* ========================================
+   FADE IN LEFT
+======================================== */
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ========================================
+   FADE IN RIGHT
+======================================== */
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ========================================
+   PROFILE IMAGE FLOATING
+======================================== */
+
+@keyframes floatingImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   FLOATING BADGE
+======================================== */
+
+@keyframes floatingBadge {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   GLOBAL PAGE INTRO
+   Modern smooth entrance for all pages
+======================================== */
+
+.page-intro {
+    animation: pageIntro 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.page-intro-delay-1 {
+    animation-delay: 0.08s;
+}
+
+.page-intro-delay-2 {
+    animation-delay: 0.16s;
+}
+
+.page-intro-delay-3 {
+    animation-delay: 0.24s;
+}
+
+.page-intro-delay-4 {
+    animation-delay: 0.32s;
+}
+
+.page-intro-delay-5 {
+    animation-delay: 0.40s;
+}
+
+@keyframes pageIntro {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   MODERN SECTION REVEAL
+======================================== */
+
+.section-reveal {
+    animation: sectionReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes sectionReveal {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .page-intro,
+    .section-reveal {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}

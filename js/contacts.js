@@ -1,0 +1,1 @@
+// Contact form is handled by the static contact.html page.
